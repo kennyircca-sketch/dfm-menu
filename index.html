@@ -509,13 +509,13 @@ header::after{content:'';display:block;height:1px;background:linear-gradient(to 
 // ⚙️ CONFIG — change these
 // ════════════════════════════════════════
 const STAFF_PIN  = '1234';   // ← change to your PIN
-const NUM_TABLES = 12;       // ← number of tables
+const NUM_TABLES = 50;       // ← number of tables
 
 const FIREBASE_CONFIG = {
-  apiKey:      "PASTE_YOUR_API_KEY_HERE",
-  authDomain:  "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://PASTE_YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId:   "PASTE_YOUR_PROJECT_ID"
+  apiKey:      "AIzaSyALkLh5nZSNqf-wy-KYk5ibFwxVC41j7RY",
+  authDomain:  "dfm-menu.firebaseapp.com",
+  databaseURL: "https://dfm-menu-default-rtdb.firebaseio.com",
+  projectId:   "dfm-menu"
 };
 
 // ════════════════════════════════════════
@@ -523,7 +523,7 @@ const FIREBASE_CONFIG = {
 // ════════════════════════════════════════
 const params = new URLSearchParams(location.search);
 const TABLE  = params.get('table')  || '1';
-const WAITER = params.get('waiter') || 'Amina';
+const WAITER = params.get('waiter') || 'Helper';
 document.getElementById('table-display').textContent  = TABLE;
 document.getElementById('waiter-display').textContent = WAITER;
 
@@ -534,7 +534,7 @@ let db = null, firebaseReady = false, staffLoggedIn = false;
 window._liveOrders = [];
 
 function initFirebase(){
-  if(FIREBASE_CONFIG.apiKey==='PASTE_YOUR_API_KEY_HERE'){
+  if(FIREBASE_CONFIG.apiKey==='AIzaSyALkLh5nZSNqf-wy-KYk5ibFwxVC41j7RY'){
     setConn(false,'Local mode'); return;
   }
   try{
