@@ -258,7 +258,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(0.6)}
 <div id="menu-screen" class="screen active">
   <header>
     <div class="brand">Dar Fish Market</div>
-    <div class="brand-sub">Kivukoni · Dar es Salaam · Fresh Coastal Flavors</div>
+    <div class="brand-sub">180msasani · Dar es Salaam · new wave</div>
     <div class="badge-row">
       <div class="badge">📍 Meza <strong id="table-display">1</strong></div>
       <div class="badge">🙋 <strong id="waiter-display">Amina</strong></div>
@@ -268,8 +268,8 @@ input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(0.6)}
   <div class="tabs-wrap">
     <div class="tabs">
       <button class="tab-btn active" onclick="showTab('starters',this)">Starters</button>
-      <button class="tab-btn" onclick="showTab('mains',this)">Main Course</button>
-      <button class="tab-btn" onclick="showTab('sushi',this)">Sushi & Raw</button>
+      <button class="tab-btn" onclick="showTab('mains',this)">Main </button>
+      <button class="tab-btn" onclick="showTab('sushi',this)">Sushi </button>
       <button class="tab-btn" onclick="showTab('desserts',this)">Desserts</button>
       <button class="tab-btn" onclick="showTab('drinks',this)">Drinks</button>
     </div>
@@ -734,13 +734,13 @@ input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(0.6)}
 // ════════════════════════════════════════
 const STAFF_PIN   = '1234';  // ← Staff PIN
 const MANAGER_PIN = '5678';  // ← Manager PIN
-const NUM_TABLES  = 12;      // ← number of tables
+const NUM_TABLES  = 150;      // ← number of tables
 
 const FIREBASE_CONFIG = {
-  apiKey:      "PASTE_YOUR_API_KEY_HERE",
-  authDomain:  "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://PASTE_YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId:   "PASTE_YOUR_PROJECT_ID"
+  apiKey:      "AIzaSyALkLh5nZSNqf-wy-KYk5ibFwxVC41j7RY",
+  authDomain:  "dfm-menu.firebaseapp.com",
+  databaseURL: "https://dfm-menu-default-rtdb.firebaseio.com",
+  projectId:   "dfm-menu"
 };
 
 // ════════════════════════════════════════
@@ -748,7 +748,7 @@ const FIREBASE_CONFIG = {
 // ════════════════════════════════════════
 const params = new URLSearchParams(location.search);
 const TABLE  = params.get('table')  || '1';
-const WAITER = params.get('waiter') || 'Amina';
+const WAITER = params.get('waiter') || 'assistant';
 document.getElementById('table-display').textContent  = TABLE;
 document.getElementById('waiter-display').textContent = WAITER;
 
