@@ -395,10 +395,10 @@ input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(0.6)}
 <div id="menu-screen" class="screen active">
   <header>
     <div class="brand" id="hdr-brand">Dar Fish Market</div>
-    <div class="brand-sub" id="hdr-brand-sub">Kivukoni · Dar es Salaam · Fresh Coastal Flavors</div>
+    <div class="brand-sub" id="hdr-brand-sub">180msasani · Dar es Salaam · New wave</div>
     <div class="badge-row">
       <div class="badge">📍 Meza <strong id="table-display">1</strong></div>
-      <div class="badge">🙋 <strong id="waiter-display">Amina</strong></div>
+      <div class="badge">🙋 <strong id="waiter-display">helper</strong></div>
       <div class="badge"><span class="conn-dot offline" id="conn-dot"></span><strong id="conn-label">Connecting…</strong></div>
       <div class="badge" id="pending-badge" style="display:none;background:rgba(200,168,75,.18);border-color:var(--gold-dim)"></div>
     </div>
@@ -885,7 +885,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(0.6)}
 // Staff PIN: 482917  |  Manager PIN: 736205  — CHANGE THESE TOO if you want, just re-hash with sha256().
 const STAFF_PIN_HASH   = '6dcd932e017833c58b1340b6d8a8f40294430c122cb84544a48ffeea7d275927'; // hash of 482917
 const MANAGER_PIN_HASH = 'a8289ef676c0b102512ef6affdddc60f1659e1fe672ccecc0b2edd36e051c78f'; // hash of 736205
-const NUM_TABLES  = 12;      // ← number of tables
+const NUM_TABLES  = 200;      // ← number of tables
 
 async function sha256(msg){
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
@@ -917,7 +917,7 @@ function friendlyFnError(e){
 const BRAND_CONFIG = {
   name:       "Dar Fish Market",                              // full name (header, page title)
   shortCode:  "DFM",                                           // used in order IDs & filenames, e.g. #DFM-...
-  tagline:    "Kivukoni · Dar es Salaam · Fresh Coastal Flavors", // under the header on the menu screen
+  tagline:    "msasan · Dar es Salaam · New wave", // under the header on the menu screen
   coverWord1: "DAR",                                           // cover screen, top word
   coverWord2: "Fish Market",                                   // cover screen, second line
   coverLine1: "Same Ocean",                                    // cover screen headline, line 1
@@ -939,10 +939,10 @@ function applyBranding(){
 }
 
 const FIREBASE_CONFIG = {
-  apiKey:      "PASTE_YOUR_API_KEY_HERE",
-  authDomain:  "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://PASTE_YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId:   "PASTE_YOUR_PROJECT_ID"
+  apiKey: "AIza...",
+authDomain: "dfm-restaurant.firebaseapp.com",
+databaseURL: "https://dfm-restaurant-default-rtdb...",
+projectId: "dfm-restaurant",
 };
 
 // ════════════════════════════════════════
